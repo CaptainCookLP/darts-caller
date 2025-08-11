@@ -783,6 +783,24 @@ With the increasing number of users >2000 we want to create a possibility to pro
 
 None of this data will be passed on to third parties!
 
+## SIMPLE ROUND WEBSOCKET
+For minimal setups this repository now includes `simple_round_ws.py`. The script connects to autodarts, listens for the active match and publishes the latest round to connected WebSocket clients.
+
+The current round can also be retrieved via a REST endpoint:
+
+```
+GET /round
+```
+
+### Environment variables
+- AUTODARTS_USERNAME
+- AUTODARTS_PASSWORD
+- AUTODARTS_CLIENT_ID
+- AUTODARTS_CLIENT_SECRET
+- AUTODARTS_BOARD_ID
+- HOST *(optional, default 0.0.0.0)*
+- PORT *(optional, default 8080)*
+
 
 ## RESOURCES
 
